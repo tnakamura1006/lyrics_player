@@ -1,0 +1,1 @@
+from .lyrics_output_controller import LyricsOutputController

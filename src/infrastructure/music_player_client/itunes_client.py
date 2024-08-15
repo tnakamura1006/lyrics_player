@@ -1,6 +1,7 @@
 import win32com.client
+from .music_player_client_interface import MusicPlayerClientInterface
 
-class ItunesClient:
+class ItunesClient(MusicPlayerClientInterface):
   def __init__(self):
     # iTunes COMオブジェクトに接続
     self.iTunes = win32com.client.Dispatch("iTunes.Application")
