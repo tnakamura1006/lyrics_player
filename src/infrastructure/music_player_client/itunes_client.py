@@ -1,6 +1,6 @@
 import win32com.client
 
-class ItunesService:
+class ItunesClient:
   def __init__(self):
     # iTunes COMオブジェクトに接続
     self.iTunes = win32com.client.Dispatch("iTunes.Application")

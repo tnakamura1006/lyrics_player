@@ -1,8 +1,6 @@
 import time
-import sys
-sys.path.append('../')
-from music_player_controller import *
-from lyrics_output import *
+from package.music_player_controller import *
+from package.lyrics_output import *
 
 class LyricsPlayManager:
   def __init__(self, musicPlayerController: MusicPlayerControllerInterface, lyricsOutput: LyricsOutputInterface):
