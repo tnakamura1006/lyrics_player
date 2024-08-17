@@ -15,12 +15,15 @@ class LyricsPlayManager:
     self.LyricsDataController = LyricsDataController
 
   def exec(self):
+    temp_music_info = {}
     while (1):
       play_music_info = self.MusicPlayerController.get_play_music_info()
       if play_music_info and play_music_info['music_player_status'] == 1:
-        self.test_output(play_music_info)
+        if temp_music_info != play_music_info:
+          temp_music_info = play_music_info
+          self.test_output(play_music_info)
       print('loop')
-      time.sleep(1)
+      time.sleep(3)
 
   def test_output(self, play_music_info):
     print(play_music_info['track_name'])
@@ -30,5 +33,13 @@ class LyricsPlayManager:
     if lyric_data != None:
       records = lyric_data['lyrics_records']
       for record in records:
-        self.LyricsOutputController.output(record)
-        time.sleep(1)
+        while 1:
+          if self.time_judge(record['second']):
+            self.LyricsOutputController.output(record)
+            break
+          time.sleep(0.75)
+
+  def time_judge(self, second: int):
+    if second <= self.MusicPlayerController.get_current_play_time():
+      return 1
+    return 0
