@@ -1,0 +1,11 @@
+{
+  "song_name" : "花",
+  "artist_name" : "秦 基博",
+  "lyrics_full" : "カエルの歌が聞こえてくるよ ナナカマド教授",
+  "lyrics_records" : [
+    {"hour" : 0, "minute" : 0, "second" : 0, "lyrics_record" : "s"},
+    {"hour" : 0, "minute" : 0, "second" : 3, "lyrics_record" : "カエルの歌が聞こえてくるよ"},
+    {"hour" : 0, "minute" : 0, "second" : 7, "lyrics_record" : "ナナカマド教授"},
+    {"hour" : 0, "minute" : 0, "second" : 15, "lyrics_record" : "e"}
+  ]
+}
