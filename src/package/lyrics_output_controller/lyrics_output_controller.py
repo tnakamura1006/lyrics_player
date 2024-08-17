@@ -6,5 +6,5 @@ class LyricsOutputController():
   def __init__(self, LyricsOutput: LyricsOutputInterface):
     self.lyrics_output = LyricsOutput
 
-  def output(self):
-    return self.lyrics_output.output()
+  def output(self, output_info):
+    return self.lyrics_output.output(output_info)
