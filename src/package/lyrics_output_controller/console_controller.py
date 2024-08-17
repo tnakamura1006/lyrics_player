@@ -1,8 +1,9 @@
 import sys
 sys.path.append('../../')
 from infrastructure.lyrics_output.lyrics_output_interface import LyricsOutputInterface
+from .lyrics_output_controller_interface import LyricsOutputControllerInterface
 
-class LyricsOutputController():
+class ConsoleController(LyricsOutputControllerInterface):
   def __init__(self, LyricsOutput: LyricsOutputInterface):
     self.lyrics_output = LyricsOutput
 

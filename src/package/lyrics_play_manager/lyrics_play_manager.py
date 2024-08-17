@@ -1,13 +1,11 @@
 import time
-from package.music_player_controller import *
-from infrastructure.music_player_client.itunes_client import *
-from package.lyrics_output_controller import *
-from infrastructure.lyrics_output.console_output import *
+from package.music_player_controller import MusicPlayerControllerInterface
+from package.lyrics_output_controller import LyricsOutputControllerInterface
 
 class LyricsPlayManager:
-  def __init__(self):
-    self.MusicPlayerController = MusicPlayerController(ItunesClient())
-    self.LyricsOutputController = LyricsOutputController(ConsoleOutput())
+  def __init__(self, MusicPlayerController: MusicPlayerControllerInterface, LyricsOutputController: LyricsOutputControllerInterface):
+    self.MusicPlayerController = MusicPlayerController
+    self.LyricsOutputController = LyricsOutputController
 
   def exec(self):
     while (1):
