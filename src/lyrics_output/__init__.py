@@ -1,2 +1,0 @@
-from .lyrics_output_interface import LyricsOutputInterface
-from .lyrics_console_output import LyricsConsoleOutput
